@@ -1,0 +1,37 @@
+{
+  "name": "animals",
+  "version": "1.0.0",
+  "description": "An API exposing information about animals in Stardew Valley",
+  "main": "server.js",
+  "scripts": {
+    "integration": "jest --verbose --runInBand --testTimeout=30000 test/integration",
+    "lint": "eslint .",
+    "test": "jest --verbose --runInBand --testTimeout=30000 test",
+    "unit": "jest --verbose test/unit",
+    "start": "node --max-http-header-size=65536 server",
+    "coverage-unit": "jest --collect-coverage --runInBand test/unit",
+    "coverage-integration": "jest --testTimeout=30000 --collect-coverage test/integration",
+    "perf": "artillery run test/performance/performance_test.yml -o test/reports/performance_report.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/stardrop-stats/animals.git"
+  },
+  "keywords": [
+    "Stardew",
+    "Valley",
+    "Animals"
+  ],
+  "author": "Kathy Bui",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stardrop-stats/animals/issues"
+  },
+  "homepage": "https://github.com/stardrop-stats/animals#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.4.1"
+  }
+}
